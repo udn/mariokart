@@ -1,0 +1,1414 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+input, select {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+	background-color: transparent;
+}
+p {
+	margin: 1em 0px;
+}
+.placeholder {
+  color: #aaa;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: white;
+	background-color: #b8d4e5;
+}
+a, a:link, a:active, a:visited, a:hover {
+	cursor: pointer;
+	border: none;
+	text-decoration: none;
+	/*color: inherit;*/
+	color: white;
+}
+a:hover {
+	text-decoration: underline;
+	color: white !important;
+}
+a.highlight {
+	color: #81f0fa;
+}
+img {
+	border: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+ol, li {
+	display: block;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+strong {
+	line-height: 20px;
+}
+em {
+	font-style: italic;
+}
+h1 {
+	font-size: 3em;
+	color: black;
+}
+
+/* unsupported browser message */
+noscript {
+	display: block;
+}
+.unsupported {
+	display: block;
+	width: 100%;
+	margin: 0px;
+	padding: 40px 0 0 0;
+	text-align: center;
+	
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/global/whitebg.jpg') center center no-repeat;
+	background-color: #b8d4e5;
+}
+.unsupported img {
+	display: block;
+	margin: 0px auto;
+}
+.unsupported img.logo {
+	margin-bottom: 100px;
+}
+.jsshow {
+	display: none;
+}
+
+#comingsoon {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	
+	width: 330px;
+	height: 174px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/global/comingsoon_banner.png') left top no-repeat;
+	z-index: 500;
+}
+#comingsoon .light {
+	width: 72px;
+	height: 118px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: absolute;
+	bottom: 14px;
+	left: 27px;
+}
+#comingsoon .light.red {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/global/comingsoon_red.png');
+}
+#comingsoon .light.yellow {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/global/comingsoon_yellow.png');
+}
+#comingsoon .light.green {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/global/comingsoon_green.png');
+}
+
+#container {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	
+	background-color: #b8d4e5;
+	background-position: center center;
+	background-repeat: repeat-x;
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/global/whitebg.jpg');
+}
+#loading {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/loading.gif');
+	background-position: center center;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 10px;
+	bottom: 60px;
+	width: 20px;
+	height: 20px;
+
+	background-color: white;
+	-webkit-border-radius: 0.25em;
+	-moz-border-radius: 0.25em;
+	border-radius: 0.25em;
+	color: black;
+}
+#status {
+	display: none; /* production */
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/information.png');
+	background-position: center left;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 20px;
+	bottom: 120px;
+	font-size: 1em;
+	padding-left: 20px;
+	background-color: white;
+	-webkit-border-radius: 0.25em;
+	-moz-border-radius: 0.25em;
+	border-radius: 0.25em;
+	color: black;
+}
+
+/* scene fundamentals */
+.scene {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.roadtile {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/global/roadtile53.gif');
+	background-repeat: repeat-x;
+	background-position: left center;
+	height: 53px;
+	
+	width: 1100px;
+}
+.roadtile2 {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/global/roadtile70.png');
+	background-repeat: repeat-x;
+	background-position: left center;
+	height: 70px;
+	
+	width: 1100px;
+}
+.roadtile3 {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/global/roadtile92.png');
+	background-repeat: repeat-x;
+	background-position: left center;
+	height: 92px;
+	
+	width: 1100px;
+}
+
+.social_links {
+	color: #f3a9a9;
+	font-size: 0.8em;
+	white-space: nowrap;
+}
+.social_links a {
+	display: inline-block;
+	vertical-align: middle;
+	
+	margin-right: 10px;
+	width: 30px;
+	height: 32px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_gallery/popup/social.png') center top no-repeat;
+}
+.social_links a.fb {
+	background-position: 0px 0px;
+}
+.social_links a.twitter {
+	background-position: -48px 0px;
+}
+.social_links a.email {
+	background-position: -96px 0px;
+}
+
+/* navigator */
+#footer {
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	
+	height: 50px;
+	width: 100%;
+	
+	z-index: 9000;
+	
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/footerbg.png') left top repeat-x;
+	background-color: #d9e5e9;
+	color: black;
+	font-size: 0.8em;
+}
+div.copyright {
+	position: fixed;
+	bottom: 55px;
+	left: 0px;
+	width: 100%;
+	z-index: 8000;
+	text-align: center;
+	color: #4f4f4f;
+}
+#rating {
+	position: absolute;
+	left: 0px;
+	top: 3px;
+	width: 130px;
+	height: 44px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/rating.png') center center no-repeat;
+}
+#rating.oldg {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/rating_oldg.png');
+}
+#rating.newg {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/rating_newg.png');
+}
+#rating.newgonline { /* default */
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/rating.png');
+}
+#cta_flyup {
+	position: absolute;
+	top: -40px;
+	right: 0px;
+	z-index: 9000;
+}
+
+#minimap {
+	/*width: 810px;*/
+	height: 55px;
+	/*margin: 0px auto;*/
+	position: relative;
+	padding-left: 150px;
+}
+#minimap #drybowser {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/0X0O17443X100w2A0A02/Image%202015-07-28%20at%204.15.02%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+
+
+#minimap #drybowser {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/0X0O17443X100w2A0A02/Image%202015-07-28%20at%204.15.02%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+
+#minimap #mario {
+	width: 35px;
+	height: 38px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/player.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+
+#minimap #bowser {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/2T3a2H1H2T0k0Z29203X/bowser.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+
+#minimap #luigi {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/1e431X2L361h2a0R1d32/Image%202015-07-28%20at%204.11.40%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+
+#minimap #waluigi {
+	width: 35px;
+	height: 38px;
+	background: url('http://cl.ly/image/2A1e2s2e011N/waluigi.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+
+#minimap #peach {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/2T1l0y2f1X3G430M1Y43/Image%202015-07-28%20at%204.06.49%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+#minimap #birdo {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/2E1L3f3n473D1T2z3D19/Image%202015-07-28%20at%204.05.53%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+#minimap #toad {
+	width: 35px;
+	height: 38px;
+	background: url('http://cl.ly/image/2L42471E3422/Image%202015-07-28%20at%204.10.30%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+#minimap .left, #minimap .right {
+	margin-top: 5px;
+	width: 32px;
+	height: 40px;
+	float: left;
+}
+#minimap .button {
+	display: block;
+	cursor: pointer;
+	font-size: 1px;
+	text-indent: -9999px;
+	margin-top: 5px;
+}
+#minimap .left {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/timeline_left.png') right center no-repeat;
+	padding-right: 18px;
+}
+#minimap .left .button {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/left.png') center center no-repeat;
+	width: 32px;
+	height: 32px;
+}
+#minimap .right {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/timeline_right.png') left center no-repeat;
+	/*background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/timeline_rightinactive.png') left center no-repeat;*/
+	padding-left: 18px;
+}
+#minimap .right .button {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/right.png') center center no-repeat;
+	width: 32px;
+	height: 32px;
+}
+#minimap .shifter {
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	float: left;
+	width: 960px;
+	padding-top: 5px;
+	height: 45px;
+	
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/timeline_bg.png') center center repeat-x;
+}
+#minimap ol {
+	width: 100%;
+	height: 40px;
+	list-style: none;
+	
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/timeline_bginactive.png') center center repeat-x;
+}
+#minimap li {
+	display: inline-block;
+	text-align: right;
+	width: 77px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/timeline_bg.png') left center repeat-x;
+	margin-top: 8px;
+}
+#minimap li.active {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/timeline_bgactive.png') left center repeat-x;
+}
+#minimap li.inactive {
+	/*opacity: 0.4;*/
+	background-image: none;
+}
+#minimap li .number {
+	display: block;
+	cursor: pointer;
+	float: right;
+	width: 17px;
+	height: 21px;
+	padding-top: 4px;
+	padding-right: 1px;
+	line-height: 17px;
+	
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/timeline_number.png') right center no-repeat;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-size: 0.9em;
+	
+	position: relative;
+	left: 3px;
+}
+.msie8 #minimap li .number {
+	height: 19px;
+}
+#minimap li.active .number {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/timeline_numberactive.png');
+}
+#minimap li.inactive .number {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/timeline_numberinactive.png');
+	cursor: default;
+}
+#minimap .tooltip {
+	width: 194px;
+	height: 58px;
+	z-index: 9001;
+	/*background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/hovers/home.png') bottom center no-repeat;*/
+}
+#minimap .tooltip.home {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/hovers/home.png') bottom center no-repeat;
+}
+#minimap .tooltip.attack {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/hovers/attack.png') bottom center no-repeat;
+	width: 194px;
+}
+#minimap .tooltip.competition {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/hovers/competition.png') bottom center no-repeat;
+	width: 204px;
+}
+#minimap .tooltip.ds {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/hovers/ds.png') bottom center no-repeat;
+	width: 200px;
+}
+#minimap .tooltip.gamecube {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/hovers/gamecube.png') bottom center no-repeat;
+	width: 198px;
+}
+#minimap .tooltip.gba {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/hovers/gba.png') bottom center no-repeat;
+	width: 202px;
+}
+#minimap .tooltip.highlights {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/hovers/highlights.png') bottom center no-repeat;
+}
+#minimap .tooltip.rediscover {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/hovers/history.png') bottom center no-repeat;
+}
+#minimap .tooltip.n64 {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/hovers/n64.png') bottom center no-repeat;
+	width: 200px;
+}
+#minimap .tooltip.snes {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/hovers/snes.png') bottom center no-repeat;
+	width: 198px;
+}
+#minimap .tooltip.wii {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/hovers/wii.png') bottom center no-repeat;
+	width: 200px;
+}
+
+.modalPopup {
+	position: absolute;
+	z-index: 500;
+}
+.modalPopup > a.close {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	
+	width: 40px;
+	height: 40px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/button_close.png') center center no-repeat;
+	cursor: pointer;
+}
+
+
+/* scene-specific elements */
+.html5video {
+}
+.html5video .controls {
+	background-color: white;
+	border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	
+	width: 100%;
+	height: 35px;
+}
+.html5video .controls a {
+	display: block;
+	display: inline-block;
+	
+	margin: 7px;
+	width: 20px;
+	height: 20px;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.html5video .controls a:hover {
+	background-color: #CCC;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.html5video a.play {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/videoplayer/paused.png');
+}
+.html5video a.play.paused {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/videoplayer/play.png');
+}
+.html5video a.mute {
+	float: right;
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/videoplayer/mute.png');
+}
+.html5video a.fullscreen {
+	float: right;
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/videoplayer/fullscreen.png');
+}
+#home_video .html5video video {
+	height: 300px;
+	width: 532px;
+}
+
+#home_video {
+	/*width: 577px;
+	height: 408px;*/
+	width: 548px;
+	height: 388px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_home/video.png') center center no-repeat;
+}
+#home_video_player, #home_video embed {
+	width: 532px;
+	height: 335px;
+	margin: 5px 0px 0px 8px;
+	object-fit: cover; /* css3 */
+}
+#home_logo_parent.bigscreen {
+	top: auto !important;
+	bottom: 80% !important;
+}
+#home_ctas_parent {
+	top: auto !important;
+	bottom: 80px !important;
+}
+#home_ctas {
+	display: none;
+	width: 1005px;
+	height: 103px;
+}
+#home_ctas a {
+	display: block;
+	float: left;
+	
+	font-size: 0.8em;
+	color: #706767;
+	width: 213px;
+	height: 103px;
+	background-position: top left !important;
+}
+#home_ctas a:hover {
+	/*color: white;*/
+	text-decoration: none;
+}
+#home_ctas a.highlights {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_home/cta_highlights.png') center center no-repeat;
+	padding: 50px 10px 0 82px;
+	width: 121px;
+	height: 53px;
+}
+#home_ctas a.highlights:hover {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_home/cta_highlights_hover.png');
+}
+#home_ctas a.competition {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_home/cta_competition.png') center center no-repeat;
+	padding: 61px 10px 0 73px;
+	width: 128px;
+	height: 42px;
+}
+#home_ctas a.competition:hover {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_home/cta_competition_hover.png');
+}
+#home_ctas a.rediscover {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_home/cta_history.png') center center no-repeat;
+	padding: 52px 10px 0 110px;
+	width: 93px;
+	height: 51px;
+}
+#home_ctas a.rediscover:hover {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_home/cta_history_hover.png');
+}
+#home_ctas a.rediscover.disabled {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_home/cta_history_disabled.png');
+	cursor: default;
+	color: #706767 !important;
+}
+#home_ctas a.attack {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_home/cta_attack.png') center center no-repeat;
+	padding: 50px 10px 0 78px;
+	width: 125px;
+	height: 53px;
+}
+#home_ctas a.attack:hover {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_home/cta_attack_hover.png');
+}
+#home_ctas a.rainbow {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_home/cta_rainbow.png') center center no-repeat;
+	padding: 39px 0 0 15px;
+	margin: 13px 0 0 4px;
+	width: 130px;
+	height: 64px;
+}
+#home_ctas a.rainbow:hover {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_home/cta_rainbow_hover.png');
+}
+
+#learnmore {
+	position: fixed;
+	top: -51px;
+	left: 45px;
+	height: 51px;
+	z-index: 500;
+}
+#keys_alert {
+	display: none;
+	width: 603px;
+	height: 61px;
+}
+#keys_alert img {
+	width: 603px;
+	height: 61px;
+}
+
+.comp_blurb {
+	width: 345px;
+	line-height: 23px;
+	font-size: 13px;
+}
+.comp_blurb.scorecard {
+	width: 282px;
+}
+.comp_blurb strong {
+	font-size: 1.2em;
+}
+.comp_blurb .nowrap {
+	white-space: nowrap;
+}
+.comp_tnc {
+	width: 260px;
+	font-size: 0.8em;
+}
+.comp_blurb .yellow {
+	color: #fdff55 !important;
+}
+#photoSwitcher {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_comp/gallery_bg.png') center center no-repeat;
+	position: relative;
+	height: 349px;
+	width: 349px;
+	
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+#photoSwitcher .photo {
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+#photoSwitcher a {
+	cursor: pointer;
+	position: absolute;
+	top: 155px;
+	width: 47px;
+	height: 47px;
+}
+#photoSwitcher .photoLeft {
+	left: -23px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_comp/button_left.png') center center no-repeat;
+}
+#photoSwitcher .photoRight {
+	right: -20px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_comp/button_right.png') center center no-repeat;
+}
+
+/* video galleries */
+.gallery .pageLeft {
+	cursor: pointer;
+	position: absolute;
+	left: 10px;
+	top: 258px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_gallery/page_left.png') center center no-repeat;
+	width: 54px;
+	height: 54px;
+	z-index: 300;
+}
+.gallery .pageRight {
+	cursor: pointer;
+	position: absolute;
+	right: 10px;
+	top: 258px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_gallery/page_right.png') center center no-repeat;
+	width: 54px;
+	height: 54px;
+	z-index: 300;
+}
+.gallery div.video {
+	position: relative;
+	display: block;
+	float: left;
+	width: 130px;
+	height: 130px;
+	margin: 0px 20px 60px 0px;
+	
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/blank.gif');
+}
+.gallery a.videolink {
+	position: relative;
+	display: block;
+	width: 130px;
+	height: 130px;
+	font-size: 0.95em;
+	text-decoration: none !important;
+}
+.gallery a.videolink .hover {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_gallery/overlay.png') center top no-repeat;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 133px;
+	height: 82px;
+}
+.gallery a.videolink:hover .hover {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_gallery/overlayhover.png') center top no-repeat;
+	display: block;
+}
+.gallery div.video .thumb {
+	padding: 4px 4px 10px 4px;
+	width: 125px;
+	height: 74px;
+	overflow: hidden;
+}
+
+#videogallery {
+	width: 944px;
+	height: 493px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_gallery/gallery.png') center center no-repeat;
+}
+#videogallery .ajaxgallery {
+	width: 760px;
+	height: 295px;
+	position: absolute;
+	left: 106px;
+	top: 130px;
+	z-index: 300;
+	
+	font-size: 0.9em;
+	color: white;
+}
+#videogallery select, input {
+	position: absolute;
+	top: 34px;
+	border: none;
+	width: 125px;
+}
+#videogallery select {
+	*top: 32px; /* ie7 */	
+}
+#videogallery .filter_name {
+	right: 380px;
+}
+#videogallery .filter_state {
+	right: 221px;
+}
+#videogallery .filter_date {
+	right: 68px;
+}
+#videogallery .title {
+	font-size: 1em;
+	line-height: 1.5em;
+	display: block;
+	font-weight: bold;
+}
+#videogallery .date {
+	display: block;
+	text-decoration: none !important;
+}
+
+#highlightsgallery {
+	width: 944px;
+	/*height: 541px;*/
+	height: 500px;
+	/*background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_gallery/gallery.png') center center no-repeat;*/
+}
+#highlightsgallery .ajaxgallery {
+	width: 760px;
+	height: 295px;
+	position: absolute;
+	left: 106px;
+	top: 130px;
+	z-index: 300;
+	
+	font-size: 0.9em;
+	color: white;
+}
+#highlightsgallery span.title {
+	font-weight: bold;
+	padding-left: 16px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_highlights/littlestar.png') left center no-repeat;
+}
+#highlightsgallery span.place {
+	margin-left: -2px;
+	padding-left: 20px
+}
+#highlightsgallery .place.first {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_highlights/place_1.png');
+}
+#highlightsgallery .place.second {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_highlights/place_2.png');
+}
+#highlightsgallery .place.third {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_highlights/place_3.png');
+}
+#highlightsgallery div.video:hover .hover {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_highlights/overlayhover.png') center top no-repeat;
+}
+#highlightsgallery a.vote {
+	display: none;
+	position: absolute;
+	top: 89px;
+	right: -3px;
+	
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_highlights/but_vote.png') top left no-repeat;
+	width: 44px;
+	height: 20px;
+}
+#highlightsgallery a.vote:hover {
+	top: 88px;
+}
+#highlightsgallery div.video:hover a.vote {
+	display: block;
+}
+#highlightsgallery div.votes {
+	font-size: 0.8em;
+	padding: 3px 0 0 19px;
+}
+
+#rainbowroad {
+	width: 867px;
+	height: 355px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_rainbow/frame.png') center center no-repeat;
+	text-align: center;
+}
+#rainbowroad a {
+	width: 243px;
+	display: inline-block;
+	margin: 125px 2px 0 3px;
+}
+#rainbowroad img {
+	display: block;
+	margin-bottom: 10px;
+}
+#rainbowroad .title {
+	display: block;
+	font-weight: bold;
+	line-height: 140%;
+}
+
+#partyphotos {
+	width: 866px;
+	height: 470px;
+	overflow: hidden;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_partyphotos/frame.png') center center no-repeat;
+	text-align: center;
+}
+ul.partyphotos {
+	padding: 110px 0 0 40px;
+	width: 820px;
+	height: 290px;
+}
+ul.partyphotos li {
+	margin: 0 30px 60px 0;
+	float: left;
+	text-align: left;
+	font-weight: bold;
+	font-size: 0.8em;
+}
+ul.partyphotos img {
+	display: block;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+#partypager {
+	width: 915px;
+	text-align: center;
+}
+#partypager a.pageLeft, #partypager a.pageRight {
+	width: 48px;
+	height: 48px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_comp/button_left.png') center center no-repeat;
+}
+#partypager a.pageLeft {}
+#partypager a.pageRight {
+	float: right;
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_comp/button_right.png');
+}
+#partypager .pages { display: none; }
+#partypager .page { display: none; }
+.partymodal {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_partyphotos/big/frame.png') center center no-repeat;
+	width: 859px;
+	height: 686px;
+	text-align: center;
+	line-height: 686px;
+}
+.partymodal img {
+	/*margin: 98px auto 0px auto;*/
+	padding-right: 5px;
+	padding-bottom: 13px;
+	vertical-align: middle;
+	*padding-top: 99px;
+}
+
+
+.videopopup .videoplayer {
+	position: absolute;
+	top: 105px;
+	left: 107px;
+
+	/*background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_gallery/popup/video.png') center center no-repeat;*/
+	background-position: center center;
+	width: 476px;
+	height: 303px;
+}
+.videopopup .videoplayer video, .videopopup .videoplayer embed {
+	width: 476px;
+	height: 303px;
+}
+.videopopup .names {
+	position: absolute;
+	right: 80px;
+	top: 126px;
+	width: 160px;
+	font-size: 0.8em;
+	color: black;
+}
+.videopopup .names div {
+	height: 35px;
+	background-position: top left;
+	background-repeat: no-repeat;
+	padding: 6px 0px 0px 38px;
+}
+.videopopup .names div.p1 {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_gallery/popup/player1.png');
+}
+.videopopup .names div.p2 {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_gallery/popup/player2.png');
+}
+.videopopup .names div.p3 {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_gallery/popup/player3.png');
+}
+.videopopup .names div.p4 {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_gallery/popup/player4.png');
+}
+.videopopup .social {
+	position: absolute;
+	top: 365px;
+	left: 620px;
+	
+	width: 30px;
+	height: 32px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_gallery/popup/social.png') center top no-repeat;
+}
+.videopopup .social.fb {
+	background-position: 0px 0px;
+}
+.videopopup .social.twitter {
+	background-position: -48px 0px;
+	left: 670px;
+}
+.videopopup .social.email {
+	background-position: -96px 0px;
+	left: 720px;
+}
+
+#highlights_voting {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_highlights/popup_voting.png') center center no-repeat;
+	width: 436px;
+	height: 157px;
+}
+#highlights_voting .votestatus {
+	position: absolute;
+	left: 119px;
+	top: 64px;
+	font-size: 0.8em;
+	line-height: 24px;
+}
+#highlights_voting .votestatus.loading {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/ajaxloading.gif') center left no-repeat;
+	padding-left: 28px;
+}
+#highlights_prizes {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_highlights/popup_prizes.png') center center no-repeat;
+	width: 700px;
+	height: 485px;
+	font-size: 0.85em;
+}
+#highlights_prizes strong {
+	font-size: 1.6em;
+}
+#highlights_prizes .blurb {
+	position: absolute;
+	left: 98px;
+	top: 147px;
+}
+#highlights_prizes .first {
+	position: absolute;
+	left: 300px;
+	top: 197px;
+	width: 300px;
+	font-size: 0.9em;
+}
+#highlights_prizes .second {
+	position: absolute;
+	left: 300px;
+	top: 298px;
+	width: 300px;
+	font-size: 0.9em;
+}
+#highlights_legal {
+	font-size: 0.8em;
+	color: #b8e8f7;
+	white-space: nowrap;
+}
+#highlights_legal a, #highlights_legal a:link, #highlights_legal a:visited, #highlights_legal a:hover {
+	color: #b8e8f7;
+	text-decoration: underline;
+}
+
+img#attack_smoke, img#attack_wario {
+	display: none;
+}
+img#attack_smoke {
+	/*margin-top: 150px;*/
+}
+#attack_title {
+	width: 384px;
+	height: 32px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_attack/title_attack.png') center center no-repeat;
+}
+#attack_title.attack {}
+#attack_title.defend {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_attack/title_defend.png') center center no-repeat;
+}
+#attack_subtitle {
+	width: 593px;
+	height: 51px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_attack/subtitle_attack.png') center center no-repeat;
+}
+#attack_subtitle.attack {}
+#attack_subtitle.defend {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_attack/subtitle_defend.png') center center no-repeat;
+}
+ul#attackbuttons {
+	width: 660px;
+	height: 255px;
+	display: block;
+	overflow: hidden;
+}
+ul#attackbuttons li {
+	position: relative;
+	float: left;
+	display: block;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_attack/butbg.png') center center no-repeat;
+	margin: 0px 10px 25px 0px;
+	width: 206px;
+	height: 104px;
+}
+ul#attackbuttons li.highlight {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_attack/butbg_highlight.png');
+}
+ul#attackbuttons li:hover, ul#attackbuttons li.highlight:hover, ul#attackbuttons li.active {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_attack/butbg_active.png');
+}
+ul#attackbuttons li img {
+	position: absolute;
+	right: 10px;
+	bottom: 2px;
+}
+ul#attackbuttons li img.active {
+	cursor: pointer;
+	opacity: 1;
+}
+
+#rediscover_biglink {
+	display: block;
+	width: 547px;
+	height: 585px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/blank.gif');
+}
+#rediscover_years1 {
+	display: none;
+}
+#rediscover_handsmask img {
+	display: none;
+}
+#rediscover_handsmask {
+	width: 527px;
+	height: 264px;
+	
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_rediscover/hands.png') center center no-repeat;
+	-webkit-border-radius: 0 0 527px 527px;
+	-moz-border-radius: 0 0 527px 527px;
+	border-radius: 0 0 527px 527px;
+	overflow: hidden;
+}
+
+#snes_photos {
+	width: 630px;
+	height: 465px;
+	overflow: hidden;
+}
+#n64_photos {
+	width: 453px;
+	height: 456px;
+	overflow: hidden;
+}
+#gba_photos {
+	width: 420px;
+	height: 410px;
+	overflow: hidden;
+}
+#gamecube_photos {
+	width: 488px;
+	height: 485px;
+	overflow: hidden;
+}
+#ds_photos {
+	width: 583px;
+	height: 480px;
+	overflow: hidden;
+}
+#wii_photos {
+	width: 401px;
+	height: 450px;
+	overflow: hidden;
+}
+a.scene_prev, a.scene_next {
+	width: 166px;
+	height: 42px;
+	display: block;
+	overflow: hidden;
+}
+a.scene_prev {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_snes/but_prev.png') center center no-repeat;
+}
+a.scene_prev:hover {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_snes/but_prev_hover.png') center center no-repeat;
+}
+a.scene_next {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_snes/but_next.png') center center no-repeat;
+}
+a.scene_next:hover {
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_snes/but_next_hover.png') center center no-repeat;
+}
+
+
+
+.history_blurb {
+	width: 380px;
+	text-align: center;
+}
+.history_blurb strong {
+	display: block;
+}
+.history_blurb p {
+	font-size: 0.8em;
+	line-height: 20px;
+	margin: 5px 0 0 0;
+	color: #f8cfcf;
+}
+#history_video {
+	width: 689px;
+	height: 508px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_snes/popup/frame.png') center center no-repeat;
+}
+#history_video .videoplayer {
+	position: absolute;
+	top: 99px;
+	left: 100px;
+	
+	width: 480px;
+	height: 303px;
+}
+#history_video .videoplayer video, #history_video .videoplayer embed {
+	width: 480px;
+	height: 303px;
+}
+
+#history_lakitu {
+	position: absolute;
+	z-index: 45;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_snes/moments/frame.png') 0px center no-repeat;
+	width: 298px;
+	height: 252px;
+	
+	top: auto !important;
+	bottom: 65% !important;
+}
+#history_lakitu a {
+	width: 33px;
+	height: 35px;
+}
+#history_lakitu a.left {
+	position: absolute;
+	top: 185px;
+	left: 24px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_snes/moments/left.png') center center no-repeat;
+}
+#history_lakitu a.right {
+	position: absolute;
+	top: 185px;
+	right: 2px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/scene_snes/moments/right.png') center center no-repeat;
+}
+#history_lakitu .blurb {
+	position: absolute;
+	top: 172px;
+	left: 64px;
+	width: 200px;
+	height: 73px;
+	
+	font-size: 0.8em;
+	color: white;
+	
+}
+
+/* scene modules */
+.paging {
+	width: 130px;
+	text-align: center;
+}
+.paging a.pageLeft, .paging a.pageRight {
+	display: block;
+	float: left;
+	vertical-align: middle;
+	width: 32px;
+	height: 32px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/global/pageLeft.png') center center no-repeat;
+}
+.paging a.pageLeft {
+	
+}
+.paging a.pageRight {
+	background-image: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/global/pageRight.png');
+}
+.paging .pages {
+	float: left;
+	margin: 0px 5px;
+}
+.paging .page {
+	float: left;
+	width: 9px;
+	height: 9px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/global/page_sprite.png') bottom center no-repeat;
+	margin: 10px 7px;
+}
+.paging .page.active {
+	background-position: top center;
+}
+
+/* Friends list. */
+.FB_friendsList
+{
+	width: 340px;
+	background-color: #ffffff;
+	color: #000000;
+	/*position: absolute;*/
+	/*	left: 0;*/
+	/*	top: 0;*/
+	/*	z-index: 5000;*/
+	
+	border: 5px solid #aaa;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.FB_friendsList ul
+{
+	overflow: auto;
+	
+	height: 355px;
+	width: 100%;
+}
+
+.FB_friendsList li
+{
+	/*cursor: pointer;*/
+	border-bottom: 1px solid #e1e1e1;
+	padding: 10px;
+
+	min-height: 50px;
+}
+.FB_friendsList li:hover
+{
+	background-color: #f7f7f7;
+}
+.FB_friendsList li.selected
+{
+	padding-left: 30px;
+}
+.FB_friendsList li.attacked {
+	background-color: #e1e1e1;
+}
+.FB_friendsList li.attack-error {
+	background-color: #F5E5E0;
+}
+.FB_friendsList li img.profile_pic
+{
+	float: left;
+	
+	margin-right: 15px;
+}
+
+.FB_friendsList li h3.friend_name
+{
+	/*float: left;*/
+	font-size: 14px;
+}
+
+.FB_friendsList li a.attack
+{
+	float: right;
+	
+	background-color: #34B8E1;
+	color: #ffffff;
+
+	padding: 6px 10px;
+}
+
+.FB_friendsList .buttons
+{
+	background-color: #e1e1e1;
+	text-align: right;
+	
+	padding: 20px 0 15px 0;
+}
+
+.FB_friendsList .buttons a.button
+{
+	background-color: #34B8E1;
+	color: #ffffff;
+
+	margin-right: 6px;
+	padding: 6px 10px;
+}
+.FB_friendsList .buttons div.paging {
+	float: left;
+	width: auto;
+	margin: -10px 0px 0px 10px;
+}
