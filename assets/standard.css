@@ -275,95 +275,16 @@ div.copyright {
 }
 
 #minimap {
-	/*width: 810px;*/
+	width: 960px;
 	height: 55px;
-	/*margin: 0px auto;*/
+	margin: 0px auto;
 	position: relative;
-	padding-left: 150px;
+	/*padding-left: 150px;*/
 }
-#minimap #drybowser {
-	width: 35px;
-	height: 38px;
-	background: url('http://f.cl.ly/items/0X0O17443X100w2A0A02/Image%202015-07-28%20at%204.15.02%20PM.png') center center no-repeat;
-	position: absolute;
-	top: 2px;
-	left: 40px;
-	z-index: 5;
-}
-
-
-#minimap #drybowser {
-	width: 35px;
-	height: 38px;
-	background: url('http://f.cl.ly/items/0X0O17443X100w2A0A02/Image%202015-07-28%20at%204.15.02%20PM.png') center center no-repeat;
-	position: absolute;
-	top: 2px;
-	left: 40px;
-	z-index: 5;
-}
-
-#minimap #mario {
+#minimap #player {
 	width: 35px;
 	height: 38px;
 	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/player.png') center center no-repeat;
-	position: absolute;
-	top: 2px;
-	left: 40px;
-	z-index: 5;
-}
-
-#minimap #bowser {
-	width: 35px;
-	height: 38px;
-	background: url('http://f.cl.ly/items/2T3a2H1H2T0k0Z29203X/bowser.png') center center no-repeat;
-	position: absolute;
-	top: 2px;
-	left: 40px;
-	z-index: 5;
-}
-
-#minimap #luigi {
-	width: 35px;
-	height: 38px;
-	background: url('http://f.cl.ly/items/1e431X2L361h2a0R1d32/Image%202015-07-28%20at%204.11.40%20PM.png') center center no-repeat;
-	position: absolute;
-	top: 2px;
-	left: 40px;
-	z-index: 5;
-}
-
-#minimap #waluigi {
-	width: 35px;
-	height: 38px;
-	background: url('http://cl.ly/image/2A1e2s2e011N/waluigi.png') center center no-repeat;
-	position: absolute;
-	top: 2px;
-	left: 40px;
-	z-index: 5;
-}
-
-#minimap #peach {
-	width: 35px;
-	height: 38px;
-	background: url('http://f.cl.ly/items/2T1l0y2f1X3G430M1Y43/Image%202015-07-28%20at%204.06.49%20PM.png') center center no-repeat;
-	position: absolute;
-	top: 2px;
-	left: 40px;
-	z-index: 5;
-}
-#minimap #birdo {
-	width: 35px;
-	height: 38px;
-	background: url('http://f.cl.ly/items/2E1L3f3n473D1T2z3D19/Image%202015-07-28%20at%204.05.53%20PM.png') center center no-repeat;
-	position: absolute;
-	top: 2px;
-	left: 40px;
-	z-index: 5;
-}
-#minimap #toad {
-	width: 35px;
-	height: 38px;
-	background: url('http://cl.ly/image/2L42471E3422/Image%202015-07-28%20at%204.10.30%20PM.png') center center no-repeat;
 	position: absolute;
 	top: 2px;
 	left: 40px;
@@ -393,7 +314,6 @@ div.copyright {
 }
 #minimap .right {
 	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/timeline_right.png') left center no-repeat;
-	/*background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/timeline_rightinactive.png') left center no-repeat;*/
 	padding-left: 18px;
 }
 #minimap .right .button {
@@ -406,7 +326,7 @@ div.copyright {
 	overflow: hidden;
 	white-space: nowrap;
 	float: left;
-	width: 960px;
+	width: 850px;
 	padding-top: 5px;
 	height: 45px;
 	
@@ -1411,4 +1331,92 @@ a.scene_next:hover {
 	float: left;
 	width: auto;
 	margin: -10px 0px 0px 10px;
+}
+#minimap #drybowser {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/0X0O17443X100w2A0A02/Image%202015-07-28%20at%204.15.02%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+
+
+#minimap #drybowser {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/0X0O17443X100w2A0A02/Image%202015-07-28%20at%204.15.02%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+
+#minimap #mario {
+	width: 35px;
+	height: 38px;
+	background: url('http://www.nintendo.com.au/gamesites/mariokartwii/images/navigator/player.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+
+#minimap #bowser {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/2T3a2H1H2T0k0Z29203X/bowser.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+
+#minimap #luigi {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/1e431X2L361h2a0R1d32/Image%202015-07-28%20at%204.11.40%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+
+#minimap #waluigi {
+	width: 35px;
+	height: 38px;
+	background: url('http://cl.ly/image/2A1e2s2e011N/waluigi.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+
+#minimap #peach {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/2T1l0y2f1X3G430M1Y43/Image%202015-07-28%20at%204.06.49%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+#minimap #birdo {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/2E1L3f3n473D1T2z3D19/Image%202015-07-28%20at%204.05.53%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+#minimap #toad {
+	width: 35px;
+	height: 38px;
+	background: url('http://cl.ly/image/2L42471E3422/Image%202015-07-28%20at%204.10.30%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
 }
