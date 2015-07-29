@@ -1392,8 +1392,82 @@ a.scene_next:hover {
 	left: 40px;
 	z-index: 5;
 }
+#minimap #babyluigi {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/0I2V3H3Y3o2C3d3I313W/Image%202015-07-28%20at%204.14.14%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
 
+#minimap #daisy {
+	width: 35px;
+	height: 38px;
+	background: url('https://files.slack.com/files-pri/T02846TUU-F088LFD2Q/pasted_image_at_2015_07_28_04_15_pm.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+
+#minimap #toadette {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/3w0B2w3e461d0N1g3E0v/Image%202015-07-28%20at%204.16.37%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+#minimap #kingboo {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/252s1o0R0C002d3m1J3R/Image%202015-07-28%20at%204.17.07%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+
+#minimap #drybones {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/163S2C07092f3N3f1N1q/Image%202015-07-28%20at%204.16.02%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+#minimap #yoshi {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/2L23171q0k302y101H3U/Image%202015-07-28%20at%204.13.43%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+#minimap #donkeykong {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/2U2V4321451e3p21132M/Image%202015-07-28%20at%204.14.41%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
 #minimap #peach {
+	width: 35px;
+	height: 38px;
+	background: url('http://f.cl.ly/items/001Y2p1m0Y1y0A2H1k00/Image%202015-07-28%20at%204.12.13%20PM.png') center center no-repeat;
+	position: absolute;
+	top: 2px;
+	left: 40px;
+	z-index: 5;
+}
+#minimap #peach2 {
 	width: 35px;
 	height: 38px;
 	background: url('http://f.cl.ly/items/2T1l0y2f1X3G430M1Y43/Image%202015-07-28%20at%204.06.49%20PM.png') center center no-repeat;
@@ -1420,3 +1494,8 @@ a.scene_next:hover {
 	left: 40px;
 	z-index: 5;
 }
+table{ text-align: center;}
+th {
+	width: 40px;
+}
+table tr td, table  tr th{ text-align: left;}
