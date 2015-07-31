@@ -1501,3 +1501,56 @@ th {
 	width: 40px;
 }
 table tr td, table  tr th{ text-align: left;}
+
+/* additional */
+table {
+	background-color: transparent;
+	border-spacing: 0px;
+	border-collapse: separate;
+	text-align: left;
+	empty-cells: show;
+}
+td, th {
+	font: 12px Verdana, Helvetica, Arial, sans-serif;
+	color: #000;
+	background-color: transparent;
+	border: 0px;
+	text-align: left;
+	vertical-align: top;
+	padding: 4px;
+}
+th {
+	text-align: right;
+}
+input, select, textarea {
+	font: 11px/13px Verdana, Helvetica, Arial, sans-serif;
+	margin: 0px;
+}
+td.stat {
+	font-weight: bold;
+}
+td.red {
+	color: #c00000;
+}
+td.green {
+	color: #00c000;
+}
+div.statbox {
+	width: 240px;
+	height: 10px;
+	border: solid 1px #000;
+	background-color: #a0a0a0;
+	padding: 1px;
+}
+div.statbar {
+	width: 0px;
+	height: 10px;
+	float: left;
+	background-color: #e0e000;
+}
+div.red {
+	background-color: #c00000;
+}
+div.green {
+	background-color: #00c000;
+}
