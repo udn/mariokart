@@ -242,7 +242,8 @@ noscript {
 	font-size: 0.8em;
 }
 div.copyright {
-	position: fixed;
+	/*position: fixed;*/
+	margin-top: 20px;
 	bottom: 55px;
 	left: 0px;
 	width: 100%;
