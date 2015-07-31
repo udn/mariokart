@@ -11,6 +11,12 @@
 	<script src="assets/compiled.js" type="text/javascript"></script>
 </head>
 <body>
+	<script>
+  	function birdo_play(){
+       var audio = document.getElementById("birdo");
+       audio.play();
+      }
+   </script>
 	<div>
 		<center>
 			<br>
@@ -127,7 +133,7 @@
 			
 			<div class="left">GIZZIP</div>
 			<div class="shifter">
-				<div id="birdo" style="left: 176px;"></div>
+				<div id="birdo" style="left: 176px;" onclick="birdo_play()"></div>
 				<ol>
 					<li class="active"><span class="number" data-index="0">1</span></li>
 					<li class="active"><span class="number" data-index="1">2</span></li>
