@@ -1478,6 +1478,7 @@ a.scene_next:hover {
 	z-index: 5;
 }
 #minimap #birdo {
+	cursor: pointer;
 	width: 35px;
 	height: 38px;
 	background: url('http://f.cl.ly/items/2E1L3f3n473D1T2z3D19/Image%202015-07-28%20at%204.05.53%20PM.png') center center no-repeat;
